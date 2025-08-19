@@ -37,6 +37,63 @@ p {
     font-size: 1.1em;
 }
 
+.mobile-click-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#mobile-click-btn {
+    padding: 16px 32px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#mobile-click-btn:active {
+    background-color: #4fa8c5;
+}
+
+.mobile-hint {
+    color: #aaa;
+    font-size: 0.95em;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .controls,
+    .metrics {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .visualizer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .square {
+        width: 90vw;
+        max-width: 220px;
+        height: 90vw;
+        max-height: 220px;
+        font-size: 1em;
+    }
+
+    .mobile-click-container {
+        display: flex;
+    }
+}
+
 #reset-metrics-btn {
     padding: 6px 14px;
     border: none;

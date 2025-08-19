@@ -183,3 +183,13 @@ window.addEventListener('keydown', (event) => {
         clickSound.play();
     }
 });
+
+// Suporte ao botão mobile
+const mobileClickBtn = document.getElementById('mobile-click-btn');
+if (mobileClickBtn) {
+    mobileClickBtn.addEventListener('click', () => {
+        checkTiming();
+        clickSound.currentTime = 0;
+        clickSound.play();
+    });
+}
