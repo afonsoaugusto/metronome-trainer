@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinador de Tempo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Treinador de Tempo</h1>
+    <p>Pressione a BARRA DE ESPAÇO no tempo certo!</p>
+
+    <div class="controls">
+        <label for="bpm">BPM:</label>
+        <input type="number" id="bpm-input" value="120" min="40" max="240">
+        <button id="start-btn">Iniciar</button>
+        <button id="stop-btn" disabled>Parar</button>
+        <label for="tolerance-input">Tolerância (%):</label>
+        <input type="number" id="tolerance-input" value="20" min="5" max="50" step="1">
+    </div>
+
+    <div class="metrics">
+        <span>Acertos: <span id="hits-count">0</span></span>
+        <span>Erros: <span id="misses-count">0</span></span>
+        <span>Taxa de Acerto: <span id="accuracy-rate">0%</span></span>
+        <button id="reset-metrics-btn">Reiniciar Métricas</button>
+    </div>
+
+    <div class="visualizer-container">
+        <div id="metronome-visualizer" class="square">
+            <span class="label">Metrônomo</span>
+        </div>
+        <div id="feedback-visualizer" class="square">
+            <span class="label">Seu Click</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
